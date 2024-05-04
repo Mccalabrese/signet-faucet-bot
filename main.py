@@ -2,6 +2,8 @@ import settings
 import discord
 from discord.ext import commands
 
+logger = settings.logging.getLogger("bot")
+
 def run():
     intents = discord.Intents.default()
 
@@ -14,7 +16,7 @@ def run():
         print("__________________")
 
 
-    bot.run(settings.DISCORD_API_SECRET)
+    bot.run(settings.DISCORD_API_SECRET, root_logger=True)
 
 if __name__ == "__main__":
     run()
