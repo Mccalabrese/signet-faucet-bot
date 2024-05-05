@@ -11,9 +11,7 @@ def run():
 
     @bot.event
     async def on_ready():
-        print(bot.user)
-        print(bot.user.id)
-        print("__________________")
+        logger.info(f"User: {bot.user} (ID: {bot.user.id})")
 
 
     bot.run(settings.DISCORD_API_SECRET, root_logger=True)
